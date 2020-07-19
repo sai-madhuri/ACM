@@ -1,0 +1,72 @@
+@import '~office-ui-fabric-react/dist/sass/References.scss';
+
+.acmProject {
+  .container {
+    margin: 0px auto;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+   padding-left:8px;
+   padding-right: 8px;
+  }
+
+.header{
+    background-color: #1E48A4;
+   text-align: center;
+   padding-left:36px !important;
+   color:white;
+   padding-top: 14px;
+    padding-bottom: 14px;
+    font-size: 21px;
+    padding-right: 58px;
+    font-weight: bold;
+
+}
+.bodyContainer{
+  padding-left:36px !important;
+  .Requestors{
+    font-weight: 600;
+  }
+  .deleteIcon{
+    color:red;
+    top: 4px;
+    position: relative;
+    font-size: 12px;
+    cursor:pointer;
+  }
+  .fontStyle{
+    font-weight: 600;
+  }
+  .btnAlignment{
+    text-align: right;
+    padding-top:48px;
+    padding-right:32px;
+    padding-bottom: 32px;;
+  }
+
+  .alignment{
+text-align: center;
+  }
+  .saveBtn{
+    background-color: darkorange;
+    color: white;
+    font-weight: 800;
+    margin-right: 16px ;
+
+  }
+.borderRadius{
+  border-radius: 6px;
+}
+
+.rowMargin{
+  margin-top:24px !important;
+  margin-bottom: 24px !important;
+}
+.fieldMargin{
+  margin-top:25px !important;
+  margin-bottom: 25px !important;
+}
+
+
+
+}
+  
+}

@@ -1,0 +1,199 @@
+@import '~office-ui-fabric-react/dist/sass/References.scss';
+
+.acmProject {
+  .container {
+    max-width: 700px;
+    margin: 0px auto;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+   padding-left:8px;
+   padding-right: 8px;
+  }
+
+.header{
+    background-color: #1E48A4;
+   text-align: center;
+   padding-left:36px !important;
+   color:white;
+   padding-top: 14px;
+    padding-bottom: 14px;
+    font-size: 21px;
+    padding-right: 58px;
+    font-weight: bold;
+    @include ms-Grid-row;
+}
+.bodyContainer{
+  padding-left:36px !important;
+  .Requestors{
+    font-weight: 600;
+    @include ms-Grid-col;
+    @include ms-sm3;
+    @include ms-md3;
+    @include ms-lg3;
+    @include ms-xl3;
+  }
+  .deleteIcon{
+    color:red;
+    top: 4px;
+    position: relative;
+    font-size: 12px;
+    cursor:pointer;
+  }
+  .fontStyle{
+    font-weight: 800;
+  }
+  .btnAlignment{
+    text-align: right;
+    padding-top:48px;
+    padding-right:32px;
+    padding-bottom: 32px;
+    @include ms-Grid-row;
+  }
+
+  .alignment{
+text-align: center;
+  }
+  .saveBtn{
+    background-color: darkorange;
+    color: white;
+    font-weight: 800;
+    margin-right: 16px ;
+
+  }
+.borderRadius{
+  border-radius: 6px;
+}
+
+.rowMargin{
+  margin-top:12px !important;
+  margin-bottom: 12px !important;
+  @include ms-Grid-row;
+}
+.fieldMargin{
+  margin-top:25px !important;
+  margin-bottom: 25px !important;
+  @include ms-Grid-row;
+}
+
+.fieldStyles{
+  font-weight: 600;
+  color:orange;
+  @include ms-Grid-col;
+  @include ms-sm3;
+  @include ms-md3;
+  @include ms-lg3;
+  @include ms-xl3;
+}
+
+.smallColumn{
+  @include ms-Grid-col;
+  @include ms-sm3;
+  @include ms-md3;
+  @include ms-lg3;
+  @include ms-xl3;
+}
+
+.iconColumn{
+  @include ms-Grid-col;
+  @include ms-sm1;
+  @include ms-md1;
+  @include ms-lg1;
+  @include ms-xl1;
+}
+
+.checkBoxColumn{
+  @include ms-Grid-col;
+  @include ms-sm2;
+  @include ms-md2;
+  @include ms-lg2;
+  @include ms-xl2;
+}
+
+.textBoxColumn{
+  @include ms-Grid-col;
+  @include ms-sm5;
+  @include ms-md5;
+  @include ms-lg5;
+  @include ms-xl5;
+}
+
+.rowHeading{
+  @include ms-Grid-row;
+}
+
+.linkStyles{
+  text-decoration: none;
+}
+}
+
+  .row {
+    @include ms-Grid-row;
+    @include ms-fontColor-white;
+    background-color: $ms-color-themeDark;
+    padding: 20px;
+  }
+
+  .column {
+    @include ms-Grid-col;
+    @include ms-lg10;
+    @include ms-xl8;
+    @include ms-xlPush2;
+    @include ms-lgPush1;
+  }
+
+  .title {
+    @include ms-font-xl;
+    @include ms-fontColor-white;
+  }
+
+  .subTitle {
+    @include ms-font-l;
+    @include ms-fontColor-white;
+  }
+
+  .description {
+    @include ms-font-l;
+    @include ms-fontColor-white;
+  }
+
+  .smallColumn{
+    @include ms-Grid-col;
+    @include ms-sm3;
+    @include ms-md3;
+    @include ms-lg3;
+    @include ms-xl3;
+  }
+  .button {
+    // Our button
+    text-decoration: none;
+    height: 32px;
+
+    // Primary Button
+    min-width: 80px;
+    background-color: $ms-color-themePrimary;
+    border-color: $ms-color-themePrimary;
+    color: $ms-color-white;
+
+    // Basic Button
+    outline: transparent;
+    position: relative;
+    font-family: "Segoe UI WestEuropean","Segoe UI",-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: $ms-font-size-m;
+    font-weight: $ms-font-weight-regular;
+    border-width: 0;
+    text-align: center;
+    cursor: pointer;
+    display: inline-block;
+    padding: 0 16px;
+
+    .label {
+      font-weight: $ms-font-weight-semibold;
+      font-size: $ms-font-size-m;
+      height: 32px;
+      line-height: 32px;
+      margin: 0 4px;
+      vertical-align: top;
+      display: inline-block;
+    }
+  }
+}

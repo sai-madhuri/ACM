@@ -1,0 +1,88 @@
+@import '~office-ui-fabric-react/dist/sass/References.scss';
+
+.acmProject {
+  .container {
+    margin: 0px auto;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+   padding-left:8px;
+   padding-right: 8px;
+  }
+
+.header{
+    background-color: #1E48A4;
+   text-align: center;
+   padding-left:36px !important;
+   color:white;
+   padding-top: 14px;
+    padding-bottom: 14px;
+    font-size: 21px;
+    padding-right: 58px;
+    font-weight: bold;
+
+}
+.bodyContainer{
+  padding-left:20px !important;
+  padding-top:32px !important;
+  padding-right: 8px !important;
+  
+  .fontStyle{
+    font-weight: 800;
+  }
+  
+.campaigns{
+   
+    .campaign{
+        padding-right:16px;
+        padding-bottom: 24px;
+        .innerCampaign{
+           cursor: pointer;
+        }
+        .logoName{
+       color:orange;
+        font-weight: 800;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        text-align: center;
+        padding-top: 4px;
+        padding-bottom: 4px;
+        }
+
+        .AddIcon{
+            text-align: center;
+             border: 1px solid yellow;
+             vertical-align: middle;
+             padding-top: 20px;
+             padding-bottom: 20px;
+             font-size: 44px;
+             color:orange;
+            }
+            @include ms-Grid-col;
+            @include ms-sm3;
+            @include ms-md3;
+            @include ms-lg3;
+            @include ms-xl3;
+    }
+    
+.entireColumn{
+  margin:0;
+  padding:0;
+  width:100%;
+  height : 100px;
+}
+
+.linkStyles{
+  text-decoration: none;
+}
+
+    @include ms-Grid-row;
+}
+
+
+
+
+
+}
+
+  
+    
+  
+}
