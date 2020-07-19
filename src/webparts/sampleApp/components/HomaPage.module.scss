@@ -50,10 +50,11 @@
             text-align: center;
              border: 1px solid yellow;
              vertical-align: middle;
-             padding-top: 20px;
+             padding-top: 80px;
              padding-bottom: 20px;
              font-size: 44px;
              color:orange;
+             height: 100px;
             }
             @include ms-Grid-col;
             @include ms-sm3;
@@ -66,7 +67,7 @@
   margin:0;
   padding:0;
   width:100%;
-  height : 100px;
+  height : 200px;
 }
 
 .linkStyles{

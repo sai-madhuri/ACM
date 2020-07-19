@@ -77,8 +77,8 @@ export default class DonarFormComponent extends React.Component<any, IDonarFormC
     }
     saveForm() {
         console.log(this.state.Fields);
-
     }
+
     cancelForm() {
 
     }
@@ -88,30 +88,27 @@ export default class DonarFormComponent extends React.Component<any, IDonarFormC
         return (
             <div className={styles.acmProject}>
                 <div className={styles.container}>
-                    <div className={styles.header + "  ms-Grid-row "}>
-                        <span>Donar Form </span>
+                    <div className={styles.header}>
+                        <span>Donor Form </span>
                     </div>
                     <div className={styles.bodyContainer}>
                         {
                             this.state.Fields && this.state.Fields.map((field, key) => {
-
-
                                 switch (field.type) {
                                     case FieldType.Textbox:
                                         return (
-                                            <div key={key} className={styles.rowMargin + " ms-Grid-row "}>
-                                                <div className={styles.fontStyle + " ms-Grid-col ms-sm3"}>{field.Name}</div>
+                                            <div key={key} className={styles.rowMargin}>
+                                                <div className={styles.fontStyle}>{field.Name}</div>
                                                 <div className=" ms-Grid-col ms-sm6">  <TextField value={field.value} onChange={(e: any) => this.onChangeValue(key, e.target.value)} /></div>
-
                                             </div>
 
                                         )
                                         break;
                                     case FieldType.TextArea:
                                         return (
-                                            <div key={key} className={styles.rowMargin + " ms-Grid-row "}>
-                                                <div className={styles.fontStyle + " ms-Grid-col ms-sm3"}>{field.Name}</div>
-                                                <div className=" ms-Grid-col ms-sm6">  <TextField value={field.value} onChange={(e: any) => this.onChangeValue(key, e.target.value)} /> </div>
+                                            <div key={key} className={styles.rowMargin}>
+                                                <div className={styles.fontStyle}>{field.Name}</div>
+                                                <div className={styles.textFieldStyles}>  <TextField value={field.value} onChange={(e: any) => this.onChangeValue(key, e.target.value)} /> </div>
 
                                             </div>
 
@@ -125,9 +122,9 @@ export default class DonarFormComponent extends React.Component<any, IDonarFormC
                                             options.push({ key: typevalue, text: typevalue })
                                         })
                                         return (
-                                            <div key={key} className={styles.rowMargin + " ms-Grid-row "}>
-                                                <div className={styles.fontStyle + " ms-Grid-col ms-sm3"}>{field.Name}</div>
-                                                <div className=" ms-Grid-col ms-sm6"> <ChoiceGroup selectedKey={field.value} options={options} required={true} onChanged={(e: any) => this.onChangeValue(key, e.key)} /> </div>
+                                            <div key={key} className={styles.rowMargin}>
+                                                <div className={styles.fontStyle}>{field.Name}</div>
+                                                <div className={styles.textFieldStyles}> <ChoiceGroup selectedKey={field.value} options={options} required={true} onChanged={(e: any) => this.onChangeValue(key, e.key)} /> </div>
 
                                             </div>
 
@@ -142,9 +139,9 @@ export default class DonarFormComponent extends React.Component<any, IDonarFormC
                                             dropdownOptions.push({ key: typevalue, text: typevalue })
                                         })
                                         return (
-                                            <div key={key} className={styles.rowMargin + " ms-Grid-row "}>
-                                                <div className={styles.fontStyle + " ms-Grid-col ms-sm3"}>{field.Name}</div>
-                                                <div className=" ms-Grid-col ms-sm6"> <Dropdown
+                                            <div key={key} className={styles.rowMargin}>
+                                                <div className={styles.fontStyle}>{field.Name}</div>
+                                                <div className={styles.textFieldStyles}> <Dropdown
                                                     placeholder="Select an option"
                                                     options={dropdownOptions}
                                                     selectedKey={field.value}
@@ -160,7 +157,7 @@ export default class DonarFormComponent extends React.Component<any, IDonarFormC
                             })
                         }
 
-                        <div className={styles.btnAlignment + " ms-Grid-row "}>
+                        <div className={styles.btnAlignment}>
                             <DefaultButton text="Save" className={styles.saveBtn} onClick={this.saveForm} />
                             <DefaultButton text="Cancel" className="" onClick={this.cancelForm} />
                         </div>

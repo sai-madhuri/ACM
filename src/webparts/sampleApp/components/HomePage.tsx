@@ -100,7 +100,7 @@ export default class HomePageComponent extends React.Component<any, IHomePageSta
                 <div className={styles.acmProject}>
                     <div className={styles.container}>
                         <div className={styles.header + "  ms-Grid-row "}>
-                            <span> Campaigns GoodLuck </span>
+                            <span> Campaigns </span>
                         </div>
                         <div className={styles.bodyContainer}>
                             <div className={styles.campaigns}>

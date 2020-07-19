@@ -87,28 +87,28 @@ export default class DashboardComponent extends React.Component<any, IDashboardC
         return (
             <div className={styles.acmProject}>
                 <div className={styles.container}>
-                    <div className={styles.header + "  ms-Grid-row "}>
+                    <div className={styles.header + "  " + styles.row}>
                         <span> {this.props.match.params.campaignName} </span>
                     </div>
                     <div className={styles.bodyContainer}>
                         <div className={styles.mainContainer}>
-                            <div className=" ms-Grid-row ">
-                                <div className=" ms-Grid-col ms-sm6 ">
+                            <div className={styles.row}>
+                                <div className={styles.col6}>
                                     <div className={styles.gridHeight}>
                                         <div className={styles.tileHeader}>Available Donors</div>
-                                        <div className={styles.textStyles + "  ms-Grid-row  "}>
-                                            <div className={styles.columnsHeader + " ms-Grid-col ms-sm4 "}>Name</div>
-                                            <div className={styles.columnsHeader + " ms-Grid-col ms-sm4 "}>{this.listName == TableName.BloodDonation ? "Blood Group" : "OfferedOn"}
+                                        <div className={styles.textStyles + "  " + styles.row}>
+                                            <div className={styles.columnsHeader + "  " + styles.col4}>Name</div>
+                                            <div className={styles.columnsHeader + " " + styles.col4}>{this.props.match.params.campaignName == "BloodDonation" ? "Blood Group" : "OfferedOn"}
                                             </div>
-                                            <div className={styles.columnsHeader + " ms-Grid-col ms-sm4 "}>Contact</div>
+                                            <div className={styles.columnsHeader + " " + styles.col4}>Contact</div>
                                         </div>
                                         {
                                             this.state.Donars && this.state.Donars.length > 0 && this.state.Donars.map((donar, key) => {
                                                 return (
-                                                    <div key={key} className={styles.textStyles + "  ms-Grid-row  "}>
-                                                        <div className=" ms-Grid-col ms-sm4 ">{donar.Title}</div>
-                                                        <div className=" ms-Grid-col ms-sm4 ">{this.listName == TableName.BloodDonation ? donar.BloodGroup : this.getFormattedDate(donar.Created)}</div>
-                                                        <div className=" ms-Grid-col ms-sm4 ">{donar.PhoneNumber}</div>
+                                                    <div key={key} className={styles.textStyles + "  " + styles.row}>
+                                                        <div className={styles.col4}>{donar.Title}</div>
+                                                        <div className={styles.col4}>{this.props.match.params.campaignName == "BloodDonation" ? donar.BloodGroup : this.getFormattedDate(donar.Created)}</div>
+                                                        <div className={styles.col4}>{donar.MobileNumber}</div>
                                                     </div>
                                                 )
                                             })
@@ -116,23 +116,23 @@ export default class DashboardComponent extends React.Component<any, IDashboardC
                                     </div>
 
                                 </div>
-                                <div className=" ms-Grid-col ms-sm6">
+                                <div className={styles.col6}>
                                     <div className={styles.gridHeight}>
                                         <div className={styles.tileHeader}>Requestors</div>
-                                        <div className={styles.textStyles + "  ms-Grid-row  "}>
-                                            <div className={styles.columnsHeader + " ms-Grid-col ms-sm4 "}>Name</div>
+                                        <div className={styles.textStyles + "  " + styles.row}>
+                                            <div className={styles.columnsHeader + "  " + styles.col4}>Name</div>
 
-                                            <div className={styles.columnsHeader + " ms-Grid-col ms-sm4 "}>  Requested On</div>
-                                            <div className={styles.columnsHeader + " ms-Grid-col ms-sm4 "}>{this.listName == TableName.BloodDonation ? "Blood Group" : "Mobile Number"}</div>
+                                            <div className={styles.columnsHeader + "  " + styles.col4}>  Requsted On</div>
+                                            <div className={styles.columnsHeader + " " + styles.col4}>{this.props.match.params.campaignName == "BloodDonation" ? "Blood Group" : "Mobile Number"}</div>
                                         </div>
                                         {
 
                                             this.state.Requestors && this.state.Requestors.length > 0 && this.state.Requestors.map((donar, key) => {
                                                 return (
-                                                    <div key={key} className={styles.textStyles + "  ms-Grid-row  "}>
-                                                        <div className=" ms-Grid-col ms-sm4 ">{donar.Title}</div>
-                                                        <div className=" ms-Grid-col ms-sm4 ">{this.getFormattedDate(donar.Created)}</div>
-                                                        <div className=" ms-Grid-col ms-sm4 ">{this.listName == TableName.BloodDonation ? donar.BloodGroup : donar.PhoneNumber}</div>
+                                                    <div key={key} className={styles.textStyles + "  " + styles.row}>
+                                                        <div className={styles.col4}>{donar.Title}</div>
+                                                        <div className={styles.col4}>{this.getFormattedDate(donar.Created)}</div>
+                                                        <div className={styles.col4}>{this.props.match.params.campaignName == "BloodDonation" ? donar.BloodGroup : donar.MobileNumber}</div>
                                                     </div>
                                                 )
                                             })
@@ -140,44 +140,44 @@ export default class DashboardComponent extends React.Component<any, IDashboardC
                                     </div>
                                 </div>
                             </div>
-                            <div className=" ms-Grid-row ">
-                                <div className=" ms-Grid-col ms-sm6 ">
+                            <div className={styles.row}>
+                                <div className={styles.col6}>
 
                                     <div className={styles.gridHeight}>
                                         <div className={styles.tileHeader}>Donor - Requestor</div>
-                                        <div className={styles.textStyles + "  ms-Grid-row  "}>
-                                            <div className={styles.columnsHeader + " ms-Grid-col ms-sm4 "}>Donor Name</div>
-                                            <div className={styles.columnsHeader + " ms-Grid-col ms-sm4 "}>Donated To</div>
-                                            <div className={styles.columnsHeader + " ms-Grid-col ms-sm4 "}>Donated On</div>
+                                        <div className={styles.textStyles + "  " + styles.row}>
+                                            <div className={styles.columnsHeader + "  " + styles.col4}>Donor Name</div>
+                                            <div className={styles.columnsHeader + "  " + styles.col4}>Donated To</div>
+                                            <div className={styles.columnsHeader + "  " + styles.col4}>Donated On</div>
                                         </div>
                                         {
 
                                             this.state.DonarRequestor && this.state.DonarRequestor.length > 0 && this.state.DonarRequestor.map((donar, key) => {
                                                 return (
-                                                    <div key={key} className={styles.textStyles + "  ms-Grid-row  "}>
-                                                        <div className=" ms-Grid-col ms-sm4 ">{donar.Name}</div>
-                                                        <div className=" ms-Grid-col ms-sm4 ">{donar.Requestor}</div>
-                                                        <div className=" ms-Grid-col ms-sm4 ">{donar.CreatedOn.toLocaleDateString()}</div>
+                                                    <div key={key} className={styles.textStyles + "  " + styles.row}>
+                                                        <div className={styles.col4}>{donar.Name}</div>
+                                                        <div className={styles.col4}>{donar.Requestor}</div>
+                                                        <div className={styles.col4}>{donar.CreatedOn.toLocaleDateString()}</div>
                                                     </div>
                                                 )
                                             })
                                         }
                                     </div>
                                 </div>
-                                <div className=" ms-Grid-col ms-sm6 ">
+                                <div className={styles.col6}>
                                     <div className={styles.gridHeight}>
                                         <div className={styles.tileHeader}>Frequently Donated Members</div>
-                                        <div className={styles.textStyles + "  ms-Grid-row  "}>
-                                            <div className={styles.columnsHeader + " ms-Grid-col ms-sm4 "}>Name</div>
-                                            <div className={styles.columnsHeader + " ms-Grid-col ms-sm8 "}>Number of Times Donated</div>
+                                        <div className={styles.textStyles + "  " + styles.row}>
+                                            <div className={styles.columnsHeader + " " + styles.col4}>Name</div>
+                                            <div className={styles.columnsHeader + " " + styles.col8}>Number of Times Donated</div>
 
                                         </div>
                                         {
                                             this.state.frequentDonars && this.state.frequentDonars.length > 0 && this.state.frequentDonars.map((donar, key) => {
                                                 return (
-                                                    <div key={key} className={styles.textStyles + "  ms-Grid-row  "}>
-                                                        <div className=" ms-Grid-col ms-sm4 ">{donar.Name}</div>
-                                                        <div className=" ms-Grid-col ms-sm8 ">{donar.Count}</div>
+                                                    <div key={key} className={styles.textStyles + "  " + styles.row}>
+                                                        <div className={styles.col4}>{donar.Name}</div>
+                                                        <div className={styles.col8}>{donar.Count}</div>
 
                                                     </div>
                                                 )

@@ -222,7 +222,7 @@ export default class AdminComponent extends React.Component<IAdminComponentProps
                     justifyContent: "center",
                     alignItems: "center"
                 }}
-            > <Loader type="Hearts" color="rgb(255,0,0)" height="100" width="100" /></div> :
+            > <Loader type="ThreeDots" color="rgb(118,83,252)" height="100" width="100" /></div> :
                 this.state.showHomePageComponent ? <HomePageComponent /> :
                     <div className={styles.acmProject}>
                         <div className={styles.container}>

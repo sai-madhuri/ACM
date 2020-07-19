@@ -18,7 +18,7 @@
     font-size: 21px;
     padding-right: 58px;
     font-weight: bold;
-
+    @include ms-Grid-row;
 }
 .bodyContainer{
   padding-left:36px !important;
@@ -34,12 +34,18 @@
   }
   .fontStyle{
     font-weight: 600;
+    @include ms-Grid-col;
+    @include ms-sm3;
+    @include ms-md3;
+    @include ms-lg3;
+    @include ms-xl3;
   }
   .btnAlignment{
     text-align: right;
     padding-top:48px;
     padding-right:32px;
-    padding-bottom: 32px;;
+    padding-bottom: 32px;
+    @include ms-Grid-row;
   }
 
   .alignment{
@@ -59,12 +65,20 @@ text-align: center;
 .rowMargin{
   margin-top:24px !important;
   margin-bottom: 24px !important;
+  @include ms-Grid-row;
 }
 .fieldMargin{
   margin-top:25px !important;
   margin-bottom: 25px !important;
 }
 
+.textFieldStyles{
+  @include ms-Grid-col;
+  @include ms-sm6;
+  @include ms-md6;
+  @include ms-lg6;
+  @include ms-xl6;
+}
 
 
 }
